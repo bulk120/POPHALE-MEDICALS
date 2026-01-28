@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POPHALE MEDICALS | Pharmacy in Sangamner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2a6e3f;
+            --primary-light: #4a9e5f;
+            --secondary: #1a4d80;
+            --accent: #e63946;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #f5f7fa;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            color: var(--secondary);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: white;
+            box-shadow: var(--box-shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-icon {
+            color: var(--primary);
+            font-size: 2.5rem;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0;
+            color: var(--primary);
+        }
+        
+        .logo-text p {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        nav a:hover {
+            color: var(--primary);
+        }
+        
+        nav a.active {
+            color: var(--primary);
+        }
+        
+        nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(42, 110, 63, 0.9), rgba(42, 110, 63, 0.8)), url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 2.8rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 12px 30px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #d32f3a;
+            color: white;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-light);
+        }
+        
+        /* Main Content */
+        .page-content {
+            padding: 80px 0;
+            min-height: 60vh;
+        }
+        
+        .page-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .page-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary);
+        }
+        
+        /* Homepage Sections */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .about-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+        
+        .about-image {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .contact-info-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--box-shadow);
+            margin-top: 40px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        
+        .contact-icon {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-right: 15px;
+            flex-shrink: 0;
+            margin-top: 5px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            color: white;
+            font-size: 1.4rem;
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        /* Privacy Policy & Terms Pages */
+        .policy-content, .terms-content {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .policy-section, .terms-section {
+            margin-bottom: 30px;
+        }
+        
+        /* Contact Page */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .contact-form {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            nav ul {
+                gap: 15px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+                display: none;
+                padding: 20px 0;
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 0;
+            }
+            
+            nav li {
+                width: 100%;
+                text-align: center;
+                padding: 15px 0;
+                border-bottom: 1px solid #eee;
+            }
+            
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .policy-content, .terms-content {
+                padding: 25px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero {
+                padding: 60px 0;
+            }
+            
+            .page-content {
+                padding: 50px 0;
+            }
+            
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            .logo-text h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-prescription-bottle-alt"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>POPHALE MEDICALS</h1>
+                        <p>Your Trusted Pharmacy in Sangamner</p>
+                    </div>
+                </div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <nav id="mainNav">
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area (will be filled by JavaScript based on current page) -->
+    <main id="mainContent">
+        <!-- Homepage content will be loaded here by default -->
+        <section class="hero">
+            <div class="container">
+                <h2>Your Health, Our Priority</h2>
+                <p>POPHALE MEDICALS is a trusted pharmacy serving the Sangamner community with quality medicines, healthcare products, and professional advice. Visit us for all your pharmaceutical needs.</p>
+                <a href="contact.html" class="btn">Contact Us Today</a>
+            </div>
+        </section>
+        
+        <div class="container">
+            <div class="page-content">
+                <section class="features">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-pills"></i>
+                        </div>
+                        <h3>Wide Medicine Range</h3>
+                        <p>We stock a comprehensive range of prescription and over-the-counter medicines to meet all your healthcare needs.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h3>Expert Advice</h3>
+                        <p>Our qualified pharmacists are available to provide professional advice on medications and health concerns.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Convenient Hours</h3>
+                        <p>We offer flexible opening hours to ensure you can access medications when you need them most.</p>
+                    </div>
+                </section>
+                
+                <section class="about-section">
+                    <div class="about-text">
+                        <h2 class="page-title">About POPHALE MEDICALS</h2>
+                        <p>Established with a commitment to community health, POPHALE MEDICALS has been serving the residents of Sangamner and surrounding areas for years. Our mission is to provide accessible, affordable, and high-quality pharmaceutical care.</p>
+                        <p>Located at a convenient location opposite B.Ed. College on Akole Bypass Road, we are easily accessible to all. Our multi-story facility ensures we have ample space to serve you with a wide range of healthcare products and services.</p>
+                        <p>We believe in building lasting relationships with our customers through trust, transparency, and exceptional service.</p>
+                    </div>
+                    
+                    <div class="about-image">
+                        <!-- Pharmacy image placeholder -->
+                        <div style="background-color: #e9f5eb; height: 100%; min-height: 300px; display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 1.5rem;">
+                            <i class="fas fa-clinic-medical" style="font-size: 5rem;"></i>
+                        </div>
+                    </div>
+                </section>
+                
+                <div class="contact-info-card">
+                    <h3>Visit Our Pharmacy</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Address</h4>
+                            <p>Opp. B.Ed. College, Ground Floor, First Floor, Second Floor, Third Floor,<br>
+                            Survey No. 86/14/5, Bansi-Mohan, Akole Bypass Road, Pophale Mala,<br>
+                            Sangamner, Ahmednagar, Maharashtra, 422605</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Phone Number</h4>
+                            <p>94222 32500</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email Address</h4>
+                            <p>pm225332@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h4>Proprietor</h4>
+                            <p>Sushant Pophale</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>POPHALE MEDICALS</h3>
+                    <p>Your trusted pharmacy in Sangamner, providing quality medicines and healthcare products with professional service and advice.</p>
+                    <div style="margin-top: 20px; font-size: 1.5rem;">
+                        <a href="#" style="color: white; margin-right: 15px;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" style="color: white; margin-right: 15px;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: white;"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> Opp. B.Ed. College, Akole Bypass Road, Sangamner</li>
+                        <li><i class="fas fa-phone" style="margin-right: 10px;"></i> 94222 32500</li>
+                        <li><i class="fas fa-envelope" style="margin-right: 10px;"></i> pm225332@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; <span id="currentYear"></span> POPHALE MEDICALS. All rights reserved. | Designed for the community of Sangamner</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for handling page navigation and mobile menu -->
+    <script>
+        // Set current year in copyright
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Page content definitions
+        const pages = {
+            'index.html': {
+                title: 'POPHALE MEDICALS | Pharmacy in Sangamner',
+                content: `
+                    <section class="hero">
+                        <div class="container">
+                            <h2>Your Health, Our Priority</h2>
+                            <p>POPHALE MEDICALS is a trusted pharmacy serving the Sangamner community with quality medicines, healthcare products, and professional advice. Visit us for all your pharmaceutical needs.</p>
+                            <a href="contact.html" class="btn">Contact Us Today</a>
+                        </div>
+                    </section>
+                    
+                    <div class="container">
+                        <div class="page-content">
+                            <section class="features">
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-pills"></i>
+                                    </div>
+                                    <h3>Wide Medicine Range</h3>
+                                    <p>We stock a comprehensive range of prescription and over-the-counter medicines to meet all your healthcare needs.</p>
+                                </div>
+                                
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-user-md"></i>
+                                    </div>
+                                    <h3>Expert Advice</h3>
+                                    <p>Our qualified pharmacists are available to provide professional advice on medications and health concerns.</p>
+                                </div>
+                                
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <h3>Convenient Hours</h3>
+                                    <p>We offer flexible opening hours to ensure you can access medications when you need them most.</p>
+                                </div>
+                            </section>
+                            
+                            <section class="about-section">
+                                <div class="about-text">
+                                    <h2 class="page-title">About POPHALE MEDICALS</h2>
+                                    <p>Established with a commitment to community health, POPHALE MEDICALS has been serving the residents of Sangamner and surrounding areas for years. Our mission is to provide accessible, affordable, and high-quality pharmaceutical care.</p>
+                                    <p>Located at a convenient location opposite B.Ed. College on Akole Bypass Road, we are easily accessible to all. Our multi-story facility ensures we have ample space to serve you with a wide range of healthcare products and services.</p>
+                                    <p>We believe in building lasting relationships with our customers through trust, transparency, and exceptional service.</p>
+                                </div>
+                                
+                                <div class="about-image">
+                                    <div style="background-color: #e9f5eb; height: 100%; min-height: 300px; display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 1.5rem;">
+                                        <i class="fas fa-clinic-medical" style="font-size: 5rem;"></i>
+                                    </div>
+                                </div>
+                            </section>
+                            
+                            <div class="contact-info-card">
+                                <h3>Visit Our Pharmacy</h3>
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div>
+                                        <h4>Address</h4>
+                                        <p>Opp. B.Ed. College, Ground Floor, First Floor, Second Floor, Third Floor,<br>
+                                        Survey No. 86/14/5, Bansi-Mohan, Akole Bypass Road, Pophale Mala,<br>
+                                        Sangamner, Ahmednagar, Maharashtra, 422605</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div>
+                                        <h4>Phone Number</h4>
+                                        <p>94222 32500</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <h4>Email Address</h4>
+                                        <p>pm225332@gmail.com</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div>
+                                        <h4>Proprietor</h4>
+                                        <p>Sushant Pophale</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            'contact.html': {
+                title: 'Contact Us | POPHALE MEDICALS',
+                content: `
+                    <div class="container">
+                        <div class="page-content">
+                            <h1 class="page-title">Contact POPHALE MEDICALS</h1>
+                            
+                            <div class="contact-container">
+                                <div class="contact-info">
+                                    <h2>Get In Touch</h2>
+                                    <p>We're here to assist you with your pharmaceutical needs. Feel free to visit our pharmacy, call us, or send us a message using the contact form.</p>
+                                    
+                                    <div class="contact-info-card">
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <i class="fas fa-map-marker-alt"></i>
+                                            </div>
+                                            <div>
+                                                <h4>Address</h4>
+                                                <p>Opp. B.Ed. College, Ground Floor, First Floor, Second Floor, Third Floor,<br>
+                                                Survey No. 86/14/5, Bansi-Mohan, Akole Bypass Road, Pophale Mala,<br>
+                                                Sangamner, Ahmednagar, Maharashtra, 422605</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <i class="fas fa-phone"></i>
+                                            </div>
+                                            <div>
+                                                <h4>Phone Number</h4>
+                                                <p>94222 32500</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <i class="fas fa-envelope"></i>
+                                            </div>
+                                            <div>
+                                                <h4>Email Address</h4>
+                                                <p>pm225332@gmail.com</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div>
+                                                <h4>Proprietor</h4>
+                                                <p>Sushant Pophale</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <i class="fas fa-clock"></i>
+                                            </div>
+                                            <div>
+                                                <h4>Business Hours</h4>
+                                                <p>Monday - Saturday: 8:00 AM - 10:00 PM<br>
+                                                Sunday: 9:00 AM - 9:00 PM</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-form">
+                                    <h2>Send Us a Message</h2>
+                                    <form id="contactForm">
+                                        <div class="form-group">
+                                            <label for="name">Your Name *</label>
+                                            <input type="text" id="name" class="form-control" required>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="phone">Phone Number *</label>
+                                            <input type="tel" id="phone" class="form-control" required>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="email">Email Address</label>
+                                            <input type="email" id="email" class="form-control">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="subject">Subject</label>
+                                            <input type="text" id="subject" class="form-control">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="message">Message *</label>
+                                            <textarea id="message" class="form-control" required></textarea>
+                                        </div>
+                                        
+                                        <button type="submit" class="btn btn-primary">Send Message</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            'privacy-policy.html': {
+                title: 'Privacy Policy | POPHALE MEDICALS',
+                content: `
+                    <div class="container">
+                        <div class="page-content">
+                            <h1 class="page-title">Privacy Policy</h1>
+                            
+                            <div class="policy-content">
+                                <div class="policy-section">
+                                    <h2>Introduction</h2>
+                                    <p>At POPHALE MEDICALS, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy outlines how we collect, use, disclose, and protect your information when you interact with our pharmacy.</p>
+                                </div>
+                                
+                                <div class="policy-section">
+                                    <h2>Information We Collect</h2>
+                                    <p>We may collect the following types of information:</p>
+                                    <ul>
+                                        <li>Personal identification information (name, contact details, date of birth)</li>
+                                        <li>Health information relevant to your prescriptions and medical needs</li>
+                                        <li>Payment information for processing transactions</li>
+                                        <li>Information about your interactions with our pharmacy</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="policy-section">
+                                    <h2>How We Use Your Information</h2>
+                                    <p>We use your information for the following purposes:</p>
+                                    <ul>
+                                        <li>To dispense medications and provide pharmaceutical care</li>
+                                        <li>To process payments for products and services</li>
+                                        <li>To communicate with you about your prescriptions and healthcare</li>
+                                        <li>To comply with legal and regulatory requirements</li>
+                                        <li>To improve our services and customer experience</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="policy-section">
+                                    <h2>Information Sharing and Disclosure</h2>
+                                    <p>We do not sell or rent your personal information to third parties. We may share your information only in the following circumstances:</p>
+                                    <ul>
+                                        <li>With healthcare providers involved in your treatment (with your consent)</li>
+                                        <li>To comply with legal obligations or regulatory requirements</li>
+                                        <li>To process insurance claims on your behalf</li>
+                                        <li>When necessary to protect your vital interests</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="policy-section">
+                                    <h2>Data Security</h2>
+                                    <p>We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. Our staff are trained in privacy protection and we maintain physical, electronic, and procedural safeguards.</p>
+                                </div>
+                                
+                                <div class="policy-section">
+                                    <h2>Your Rights</h2>
+                                    <p>You have the right to:</p>
+                                    <ul>
+                                        <li>Access the personal information we hold about you</li>
+                                        <li>Request corrections to inaccurate or incomplete information</li>
+                                        <li>Request deletion of your information where applicable</li>
+                                        <li>Object to or restrict certain processing of your information</li>
+                                        <li>Withdraw consent at any time, where applicable</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="policy-section">
+                                    <h2>Contact Us</h2>
+                                    <p>If you have any questions or concerns about our Privacy Policy or how we handle your information, please contact us:</p>
+                                    <p><strong>POPHALE MEDICALS</strong><br>
+                                    Opp. B.Ed. College, Akole Bypass Road, Sangamner<br>
+                                    Phone: 94222 32500<br>
+                                    Email: pm225332@gmail.com</p>
+                                </div>
+                                
+                                <div class="policy-section">
+                                    <h2>Policy Updates</h2>
+                                    <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date. We encourage you to review this policy periodically.</p>
+                                    <p><em>Last updated: October 2023</em></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            'terms.html': {
+                title: 'Terms & Conditions | POPHALE MEDICALS',
+                content: `
+                    <div class="container">
+                        <div class="page-content">
+                            <h1 class="page-title">Terms & Conditions</h1>
+                            
+                            <div class="terms-content">
+                                <div class="terms-section">
+                                    <h2>1. Acceptance of Terms</h2>
+                                    <p>By accessing and using the services of POPHALE MEDICALS, you accept and agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you should not use our services.</p>
+                                </div>
+                                
+                                <div class="terms-section">
+                                    <h2>2. Pharmaceutical Services</h2>
+                                    <p>POPHALE MEDICALS provides pharmaceutical services including dispensing prescription medications, offering over-the-counter products, and providing healthcare advice. All prescriptions must be valid and issued by a registered medical practitioner.</p>
+                                </div>
+                                
+                                <div class="terms-section">
+                                    <h2>3. Prescription Requirements</h2>
+                                    <p>For prescription medications, you must provide a valid prescription from a licensed healthcare provider. We reserve the right to refuse to dispense medication if we have concerns about the prescription's validity or appropriateness.</p>
+                                </div>
+                                
+                                <div class="terms-section">
+                                    <h2>4. Payment Terms</h2>
+                                    <p>Payment is due at the time of service unless other arrangements have been made in advance. We accept various payment methods including cash, credit/debit cards, and applicable insurance claims. Prices are subject to change without notice.</p>
+                                </div>
+                                
+                                <div class="terms-section">
+                                    <h2>5. Health Information and Privacy</h2>
+                                    <p>We collect and handle your health information in accordance with our Privacy Policy and applicable laws. By using our services, you consent to our collection and use of your health information as described in our Privacy Policy.</p>
+                                </div>
+                                
+                                <div class="terms-section">
+                                    <h2>6. Liability</h2>
+                                    <p>While we take every precaution to ensure accuracy in dispensing medications, POPHALE MEDICALS shall not be liable for any adverse reactions or outcomes resulting from medication use. Patients should always follow their healthcare provider's instructions and report any adverse effects immediately.</p>
+                                </div>
+                                
+                                <div class="terms-section">
+                                    <h2>7. Returns and Refunds</h2>
+                                    <p>Due to health and safety regulations, we generally cannot accept returns of prescription medications. Over-the-counter products may be returned with receipt within 7 days of purchase if unopened and in original packaging. Refunds are at the discretion of management.</p>
+                                </div>
+                                
+                                <div class="terms-section">
+                                    <h2>8. Professional Advice</h2>
+                                    <p>Our pharmacists provide professional advice regarding medications and general health matters. However, this advice does not replace consultation with a healthcare provider for medical diagnosis or treatment of specific conditions.</p>
+                                </div>
+                                
+                                <div class="terms-section">
+                                    <h2>9. Changes to Terms</h2>
+                                    <p>We reserve the right to modify these Terms and Conditions at any time. Changes will be effective immediately upon posting. Your continued use of our services constitutes acceptance of any modified terms.</p>
+                                </div>
+                                
+                                <div class="terms-section">
+                                    <h2>10. Governing Law</h2>
+                                    <p>These Terms and Conditions are governed by the laws of India and the state of Maharashtra. Any disputes shall be subject to the exclusive jurisdiction of the courts in Ahmednagar, Maharashtra.</p>
+                                </div>
+                                
+                                <div class="terms-section">
+                                    <h2>11. Contact Information</h2>
+                                    <p>For questions about these Terms and Conditions, please contact us:</p>
+                                    <p><strong>POPHALE MEDICALS</strong><br>
+                                    Opp. B.Ed. College, Akole Bypass Road, Sangamner<br>
+                                    Phone: 94222 32500<br>
+                                    Email: pm225332@gmail.com</p>
+                                    <p><em>Last updated: October 2023</em></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            }
+        };
+        
+        // Handle navigation between pages
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set active navigation link based on current page
+            const navLinks = document.querySelectorAll('nav a');
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            
+            navLinks.forEach(link => {
+                const linkHref = link.getAttribute('href');
+                if (linkHref === currentPage) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+                
+                // Add click event for navigation
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Get the page from the link's href
+                    const page = this.getAttribute('href');
+                    
+                    // Update browser history
+                    window.history.pushState({}, '', page);
+                    
+                    // Load the page content
+                    loadPage(page);
+                    
+                    // Close mobile menu if open
+                    mainNav.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                });
+            });
+            
+            // Handle browser back/forward buttons
+            window.addEventListener('popstate', function() {
+                const page = window.location.pathname.split('/').pop() || 'index.html';
+                loadPage(page);
+            });
+            
+            // Load initial page content
+            loadPage(currentPage);
+            
+            // Handle contact form submission
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Thank you for your message! We will contact you soon.');
+                    this.reset();
+                });
+            }
+        });
+        
+        // Function to load page content
+        function loadPage(page) {
+            const mainContent = document.getElementById('mainContent');
+            const pageData = pages[page] || pages['index.html'];
+            
+            // Update page title
+            document.title = pageData.title;
+            
+            // Update main content
+            mainContent.innerHTML = pageData.content;
+            
+            // Update active navigation link
+            document.querySelectorAll('nav a').forEach(link => {
+                if (link.getAttribute('href') === page) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+            
+            // Re-attach event listeners for forms on the new page
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Thank you for your message! We will contact you soon.');
+                    this.reset();
+                });
+            }
+        }
+    </script>
+</body>
+</html>
