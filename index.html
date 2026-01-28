@@ -269,6 +269,19 @@
             margin-top: 5px;
         }
         
+        .gstin-badge {
+            display: inline-block;
+            background-color: #f0f7ff;
+            color: var(--secondary);
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-weight: 600;
+            border: 1px solid #d0e3ff;
+            margin-top: 10px;
+            font-family: monospace;
+            font-size: 1.1rem;
+        }
+        
         /* Footer */
         footer {
             background-color: var(--dark);
@@ -326,6 +339,15 @@
             color: #aaa;
         }
         
+        .gstin-footer {
+            text-align: center;
+            margin-top: 10px;
+            font-weight: 600;
+            color: #4a9e5f;
+            font-family: monospace;
+            font-size: 1.1rem;
+        }
+        
         /* Privacy Policy & Terms Pages */
         .policy-content, .terms-content {
             background-color: white;
@@ -374,6 +396,40 @@
         textarea.form-control {
             min-height: 150px;
             resize: vertical;
+        }
+        
+        /* Business Info Section */
+        .business-info {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--box-shadow);
+            margin-top: 30px;
+        }
+        
+        .business-info h3 {
+            color: var(--primary);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .info-item {
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: var(--border-radius);
+        }
+        
+        .info-label {
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 5px;
         }
         
         /* Responsive Design */
@@ -456,6 +512,7 @@
                     <div class="logo-text">
                         <h1>POPHALE MEDICALS</h1>
                         <p>Your Trusted Pharmacy in Sangamner</p>
+                        <div class="gstin-badge">GSTIN: 27AAGFP7765F1ZV</div>
                     </div>
                 </div>
                 
@@ -520,6 +577,28 @@
                         <p>Established with a commitment to community health, POPHALE MEDICALS has been serving the residents of Sangamner and surrounding areas for years. Our mission is to provide accessible, affordable, and high-quality pharmaceutical care.</p>
                         <p>Located at a convenient location opposite B.Ed. College on Akole Bypass Road, we are easily accessible to all. Our multi-story facility ensures we have ample space to serve you with a wide range of healthcare products and services.</p>
                         <p>We believe in building lasting relationships with our customers through trust, transparency, and exceptional service.</p>
+                        
+                        <div class="business-info">
+                            <h3>Business Information</h3>
+                            <div class="info-grid">
+                                <div class="info-item">
+                                    <div class="info-label">GSTIN Number</div>
+                                    <div class="gstin-badge">27AAGFP7765F1ZV</div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">Proprietor</div>
+                                    <div>Sushant Pophale</div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">Business Type</div>
+                                    <div>Pharmacy & Medical Store</div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">Location</div>
+                                    <div>Sangamner, Maharashtra</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     
                     <div class="about-image">
@@ -573,6 +652,17 @@
                             <p>Sushant Pophale</p>
                         </div>
                     </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                        </div>
+                        <div>
+                            <h4>GSTIN Number</h4>
+                            <div class="gstin-badge">27AAGFP7765F1ZV</div>
+                            <p style="margin-top: 5px; font-size: 0.9rem; color: var(--gray);">Registered under GST Act, 2017</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -608,8 +698,13 @@
                         <li><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> Opp. B.Ed. College, Akole Bypass Road, Sangamner</li>
                         <li><i class="fas fa-phone" style="margin-right: 10px;"></i> 94222 32500</li>
                         <li><i class="fas fa-envelope" style="margin-right: 10px;"></i> pm225332@gmail.com</li>
+                        <li><i class="fas fa-file-invoice-dollar" style="margin-right: 10px;"></i> GSTIN: 27AAGFP7765F1ZV</li>
                     </ul>
                 </div>
+            </div>
+            
+            <div class="gstin-footer">
+                GSTIN: 27AAGFP7765F1ZV
             </div>
             
             <div class="copyright">
@@ -681,6 +776,28 @@
                                     <p>Established with a commitment to community health, POPHALE MEDICALS has been serving the residents of Sangamner and surrounding areas for years. Our mission is to provide accessible, affordable, and high-quality pharmaceutical care.</p>
                                     <p>Located at a convenient location opposite B.Ed. College on Akole Bypass Road, we are easily accessible to all. Our multi-story facility ensures we have ample space to serve you with a wide range of healthcare products and services.</p>
                                     <p>We believe in building lasting relationships with our customers through trust, transparency, and exceptional service.</p>
+                                    
+                                    <div class="business-info">
+                                        <h3>Business Information</h3>
+                                        <div class="info-grid">
+                                            <div class="info-item">
+                                                <div class="info-label">GSTIN Number</div>
+                                                <div class="gstin-badge">27AAGFP7765F1ZV</div>
+                                            </div>
+                                            <div class="info-item">
+                                                <div class="info-label">Proprietor</div>
+                                                <div>Sushant Pophale</div>
+                                            </div>
+                                            <div class="info-item">
+                                                <div class="info-label">Business Type</div>
+                                                <div>Pharmacy & Medical Store</div>
+                                            </div>
+                                            <div class="info-item">
+                                                <div class="info-label">Location</div>
+                                                <div>Sangamner, Maharashtra</div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 
                                 <div class="about-image">
@@ -731,6 +848,17 @@
                                     <div>
                                         <h4>Proprietor</h4>
                                         <p>Sushant Pophale</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-file-invoice-dollar"></i>
+                                    </div>
+                                    <div>
+                                        <h4>GSTIN Number</h4>
+                                        <div class="gstin-badge">27AAGFP7765F1ZV</div>
+                                        <p style="margin-top: 5px; font-size: 0.9rem; color: var(--gray);">Registered under GST Act, 2017</p>
                                     </div>
                                 </div>
                             </div>
@@ -795,6 +923,17 @@
                                         
                                         <div class="contact-item">
                                             <div class="contact-icon">
+                                                <i class="fas fa-file-invoice-dollar"></i>
+                                            </div>
+                                            <div>
+                                                <h4>GSTIN Number</h4>
+                                                <div class="gstin-badge">27AAGFP7765F1ZV</div>
+                                                <p style="margin-top: 5px; font-size: 0.9rem; color: var(--gray);">Registered under GST Act, 2017</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
                                                 <i class="fas fa-clock"></i>
                                             </div>
                                             <div>
@@ -852,7 +991,7 @@
                             <div class="policy-content">
                                 <div class="policy-section">
                                     <h2>Introduction</h2>
-                                    <p>At POPHALE MEDICALS, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy outlines how we collect, use, disclose, and protect your information when you interact with our pharmacy.</p>
+                                    <p>At POPHALE MEDICALS (GSTIN: 27AAGFP7765F1ZV), we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy outlines how we collect, use, disclose, and protect your information when you interact with our pharmacy.</p>
                                 </div>
                                 
                                 <div class="policy-section">
@@ -863,6 +1002,7 @@
                                         <li>Health information relevant to your prescriptions and medical needs</li>
                                         <li>Payment information for processing transactions</li>
                                         <li>Information about your interactions with our pharmacy</li>
+                                        <li>GST information for billing purposes</li>
                                     </ul>
                                 </div>
                                 
@@ -872,6 +1012,7 @@
                                     <ul>
                                         <li>To dispense medications and provide pharmaceutical care</li>
                                         <li>To process payments for products and services</li>
+                                        <li>To generate GST-compliant invoices</li>
                                         <li>To communicate with you about your prescriptions and healthcare</li>
                                         <li>To comply with legal and regulatory requirements</li>
                                         <li>To improve our services and customer experience</li>
@@ -885,6 +1026,7 @@
                                         <li>With healthcare providers involved in your treatment (with your consent)</li>
                                         <li>To comply with legal obligations or regulatory requirements</li>
                                         <li>To process insurance claims on your behalf</li>
+                                        <li>For GST compliance and reporting as required by law</li>
                                         <li>When necessary to protect your vital interests</li>
                                     </ul>
                                 </div>
@@ -907,9 +1049,9 @@
                                 </div>
                                 
                                 <div class="policy-section">
-                                    <h2>Contact Us</h2>
-                                    <p>If you have any questions or concerns about our Privacy Policy or how we handle your information, please contact us:</p>
+                                    <h2>Business Information</h2>
                                     <p><strong>POPHALE MEDICALS</strong><br>
+                                    GSTIN: 27AAGFP7765F1ZV<br>
                                     Opp. B.Ed. College, Akole Bypass Road, Sangamner<br>
                                     Phone: 94222 32500<br>
                                     Email: pm225332@gmail.com</p>
@@ -935,7 +1077,7 @@
                             <div class="terms-content">
                                 <div class="terms-section">
                                     <h2>1. Acceptance of Terms</h2>
-                                    <p>By accessing and using the services of POPHALE MEDICALS, you accept and agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you should not use our services.</p>
+                                    <p>By accessing and using the services of POPHALE MEDICALS (GSTIN: 27AAGFP7765F1ZV), you accept and agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you should not use our services.</p>
                                 </div>
                                 
                                 <div class="terms-section">
@@ -949,44 +1091,55 @@
                                 </div>
                                 
                                 <div class="terms-section">
-                                    <h2>4. Payment Terms</h2>
-                                    <p>Payment is due at the time of service unless other arrangements have been made in advance. We accept various payment methods including cash, credit/debit cards, and applicable insurance claims. Prices are subject to change without notice.</p>
+                                    <h2>4. Billing and GST</h2>
+                                    <p>All bills and invoices will include our GSTIN number (27AAGFP7765F1ZV) as required by Indian law. Prices are inclusive of applicable GST unless otherwise specified. Payment is due at the time of service unless other arrangements have been made in advance.</p>
                                 </div>
                                 
                                 <div class="terms-section">
-                                    <h2>5. Health Information and Privacy</h2>
+                                    <h2>5. Payment Terms</h2>
+                                    <p>We accept various payment methods including cash, credit/debit cards, UPI, and applicable insurance claims. All transactions will include GST as per applicable rates. Prices are subject to change without notice.</p>
+                                </div>
+                                
+                                <div class="terms-section">
+                                    <h2>6. Health Information and Privacy</h2>
                                     <p>We collect and handle your health information in accordance with our Privacy Policy and applicable laws. By using our services, you consent to our collection and use of your health information as described in our Privacy Policy.</p>
                                 </div>
                                 
                                 <div class="terms-section">
-                                    <h2>6. Liability</h2>
+                                    <h2>7. Liability</h2>
                                     <p>While we take every precaution to ensure accuracy in dispensing medications, POPHALE MEDICALS shall not be liable for any adverse reactions or outcomes resulting from medication use. Patients should always follow their healthcare provider's instructions and report any adverse effects immediately.</p>
                                 </div>
                                 
                                 <div class="terms-section">
-                                    <h2>7. Returns and Refunds</h2>
-                                    <p>Due to health and safety regulations, we generally cannot accept returns of prescription medications. Over-the-counter products may be returned with receipt within 7 days of purchase if unopened and in original packaging. Refunds are at the discretion of management.</p>
+                                    <h2>8. Returns and Refunds</h2>
+                                    <p>Due to health and safety regulations, we generally cannot accept returns of prescription medications. Over-the-counter products may be returned with receipt within 7 days of purchase if unopened and in original packaging. Refunds are at the discretion of management and will include applicable GST adjustments.</p>
                                 </div>
                                 
                                 <div class="terms-section">
-                                    <h2>8. Professional Advice</h2>
+                                    <h2>9. Professional Advice</h2>
                                     <p>Our pharmacists provide professional advice regarding medications and general health matters. However, this advice does not replace consultation with a healthcare provider for medical diagnosis or treatment of specific conditions.</p>
                                 </div>
                                 
                                 <div class="terms-section">
-                                    <h2>9. Changes to Terms</h2>
+                                    <h2>10. GST Compliance</h2>
+                                    <p>POPHALE MEDICALS is registered under the GST Act, 2017 (GSTIN: 27AAGFP7765F1ZV). We comply with all GST regulations and provide GST-compliant invoices for all transactions as required by law.</p>
+                                </div>
+                                
+                                <div class="terms-section">
+                                    <h2>11. Changes to Terms</h2>
                                     <p>We reserve the right to modify these Terms and Conditions at any time. Changes will be effective immediately upon posting. Your continued use of our services constitutes acceptance of any modified terms.</p>
                                 </div>
                                 
                                 <div class="terms-section">
-                                    <h2>10. Governing Law</h2>
+                                    <h2>12. Governing Law</h2>
                                     <p>These Terms and Conditions are governed by the laws of India and the state of Maharashtra. Any disputes shall be subject to the exclusive jurisdiction of the courts in Ahmednagar, Maharashtra.</p>
                                 </div>
                                 
                                 <div class="terms-section">
-                                    <h2>11. Contact Information</h2>
+                                    <h2>13. Contact Information</h2>
                                     <p>For questions about these Terms and Conditions, please contact us:</p>
                                     <p><strong>POPHALE MEDICALS</strong><br>
+                                    GSTIN: 27AAGFP7765F1ZV<br>
                                     Opp. B.Ed. College, Akole Bypass Road, Sangamner<br>
                                     Phone: 94222 32500<br>
                                     Email: pm225332@gmail.com</p>
